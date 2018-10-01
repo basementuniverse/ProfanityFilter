@@ -9,15 +9,15 @@ require('ProfanityFilter.php');
 
 $pf = new ProfanityFilter\ProfanityFilter();
 
-$test1 = $pf->check('Dude, this project is shit!');
+$test1 = $pf->check('Dude, this project sucks!');
 
 array(1) {
   [0]=>
   array(3) {
     ["base_word"]=>
-    string(4) "shit"
+    string(4) "suck"
     ["word"]=>
-    string(4) "shit"
+    string(4) "sucks"
     ["offset"]=>
     int(22)
   }
@@ -27,7 +27,7 @@ array(1) {
 ```
 
 $pf->substitutionFunction = 'random-symbols';
-$test2 = $pf->sanitise('Dude, this project is shit!');
+$test2 = $pf->sanitise('Dude, this project sucks!');
 
 array(5) {
   ["clean"]=>
@@ -37,17 +37,17 @@ array(5) {
     [0]=>
     array(4) {
       ["base_word"]=>
-      string(4) "shit"
+      string(4) "suck"
       ["word"]=>
-      string(4) "shit"
+      string(4) "sucks"
       ["offset"]=>
       int(22)
       ["replacement"]=>
-      string(4) "$&@&"
+      string(4) "$&@&@"
     }
   }
   ["output"]=>
-  string(27) "Dude, this project is $&@&!"
+  string(27) "Dude, this project $&@&@!"
   ["total_length"]=>
   int(27)
   ["bad_length"]=>
