@@ -9,11 +9,11 @@ class ProfanityFilter {
      * @var array
      */
     public $badWords = [
-        'fuck',
-        'shit',
-        'cunt',
-        'bitch',
-        'arse'
+        'provide',
+        'your',
+        'own',
+        'bad',
+        'words'
     ];
 
     /**
@@ -25,7 +25,7 @@ class ProfanityFilter {
         'sugar',
         'crackers',
         'bleep',
-        'apple'
+        'wibble'
     ];
 
     /**
